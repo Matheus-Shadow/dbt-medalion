@@ -1,4 +1,7 @@
-Welcome to your new dbt project!
+Iai! 
+
+Esse repositório tem como intuito realizar a construção de uma pipeline de dados madura 
+com técnicas de ci/cd com dbt, databricks e airflow.
 
 ### Using the starter project
 
