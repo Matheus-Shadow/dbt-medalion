@@ -4,8 +4,8 @@ databricks:
 
     dev:
       type: databricks
-      catalog: "{{ env_var('DBT_CATALOG', 'hive_metastore') }}"
-      schema: "{{ env_var('DBT_SCHEMA_DEV', 'dev_dbt') }}"
+      catalog: "{{ env_var('DATABRICKS_CATALOG') }}"
+      schema: "{{ env_var('DATABRICKS_SCHEMA_DEV', 'dev_dbt') }}"
       host: "{{ env_var('DATABRICKS_HOST') }}"
       http_path: "{{ env_var('DATABRICKS_HTTP_PATH') }}"
       token: "{{ env_var('DATABRICKS_TOKEN') }}"
@@ -13,8 +13,8 @@ databricks:
 
     prod:
       type: databricks
-      catalog: "{{ env_var('DBT_CATALOG', 'hive_metastore') }}"
-      schema: "{{ env_var('DBT_SCHEMA_PROD', 'prod_dbt') }}"
+      catalog: "{{ env_var('DATABRICKS_CATALOG') }}"
+      schema: "{{ env_var('DATABRICKS_SCHEMA_PROD', 'prod_dbt') }}"
       host: "{{ env_var('DATABRICKS_HOST') }}"
       http_path: "{{ env_var('DATABRICKS_HTTP_PATH') }}"
       token: "{{ env_var('DATABRICKS_TOKEN') }}"
@@ -22,7 +22,7 @@ databricks:
 
     pr:
       type: databricks
-      catalog: "{{ env_var('DBT_CATALOG', 'hive_metastore') }}"
+      catalog: "{{ env_var('DATABRICKS_CATALOG') }}"
       schema: "{{ env_var('SCHEMA_PREFIX', 'pr') }}_{{ var('schema_id') }}"
       host: "{{ env_var('DATABRICKS_HOST') }}"
       http_path: "{{ env_var('DATABRICKS_HTTP_PATH') }}"

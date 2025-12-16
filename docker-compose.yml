@@ -1,0 +1,13 @@
+services:
+  dbt:
+    image: ghcr.io/dbt-labs/dbt-core:1.8.1
+    container_name: dbt
+    working_dir: /usr/app/dbt
+    volumes:
+      - .:/usr/app/dbt
+    env_file:
+      - .env
+    environment:
+      DBT_PROFILES_DIR: /usr/app/dbt
+    entrypoint: ["tail", "-f", "/dev/null"]
+    tty: true
