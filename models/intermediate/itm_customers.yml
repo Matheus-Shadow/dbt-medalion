@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: itm_customers
+    description: "Staging model for customer data"
+    columns:
+      - name: id_cliente
+        description: "Chave Primária para os relacionamentos das tabelas de clientes"
+        tests:
+          - not_null
+          - unique
+      - name: email
+        description: "Customer email address"
+        tests:
+          - not_null
+          - unique
+      - name: first_name
+        description: "Customer first name"
+        tests:
+          - not_null
+      - name: last_name
+        description: "Customer last name"
+        tests:
+          - not_null
+      - name: updated_at
+        description: "Data de atualização do cadastro"
+        tests:
+          - not_null
