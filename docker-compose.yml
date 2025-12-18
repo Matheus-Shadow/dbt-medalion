@@ -1,6 +1,6 @@
 services:
   dbt:
-    image: ghcr.io/dbt-labs/dbt-core:1.8.1
+    build: .
     container_name: dbt
     working_dir: /usr/app/dbt
     volumes:
